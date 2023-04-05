@@ -1,24 +1,28 @@
 # Ohjeita
 
-## Luo react sovellus testeineen paikalliseen ympäristöön 
+## Luo react sovellus paikalliseen ympäristöön 
 
-### Uusi react app 
+### React app 
 
     npx create-react-app react-app-1
 
-### Kokeile (http://localhost:3000/ oletus) 
+### Kokeile
 
     npm start 
+
+Oletus http://localhost:3000/ 
 
 ### Aja testit 
 
     npm run test 
 
-### Käännä koodit (kääntää koodin jsx->html/js ja jos esim. webpack, niin pakkaa myös)
+### Käännä koodit
 
     npm run build 
 
-### Siirrä testit src/test hakemistoon, jotta selkeämpää
+### Siirrä testit src/test hakemistoon 
+
+Näin selkeämpää. 
 
 ### Lisää Counter.js komponentti
 
@@ -51,7 +55,11 @@
 
     export default Counter;
 
-### Lisää Counter.test.js test-hakemistoon
+Käytä App.js komponentista
+
+### Lisää Counter.test.js 
+
+Lisää test-hakemistoon.
 
     import { render, fireEvent, screen } from "@testing-library/react";
     import Counter from "../Counter";
@@ -81,65 +89,53 @@
         expect(counter).toHaveTextContent("2");
     });
 
-### Asenna kaikki lintterit ohjeella:
+### Asenna lintterit ohjeella:
 
     https://binary-studio.com/2021/12/21/lint-your-project-with-github-actions/
 
-### Testaa lintterit (jos haluat ohittaa, niin yksi tapa on poistaa käynnistys package.json tiedostosta)
+### Testaa lintterit 
 
     npm run lint
 
-### Testaa testien kattavuus    
-    
-    npm test -- --coverage
+Jos haluat ohittaa, niin yksi tapa on poistaa käynnistys package.json tiedostosta.
 
 ### Testaa testien kattavuus    
     
     npm test -- --coverage
 
-### Lokaaliympäristöon nyt done
-
-## Vie koodit Githubiin ja tee CI/CD
+## Koodit Githubiin ja CI/CD käyttöön
 
 ### Luo repository, kloonaa, kopioi sovellus ja vie koodit Githubiin
 
-1. Luo Githubissa repository ja tee siitä public (huom. näkyy muille)
-2. Kloonaa se sun koneelle paikalliseen hakemistoon. Yksi helppo tapa on 
+1. Luo Githubissa repository ja tee siitä julkinen
+2. Kloonaa se paikalliseen hakemistoon. Esimerkiksi: 
 
-    -   Avaa VSCode (ei väliä mistä tai mitä sisältää) 
-    -   Paina shift+ctrl+p
-    -   Kirjoita ja valitse Git:clone
-    -   Laita urliksi Githubin repon urli (se löytyy Githubin vihreästä code painikkeesta)
-    -   Valitse mikä tahansa paikka sun koneelta
-    -   Sulje VSCode tässä hakemistossa
+    -   Avaa VSCode -> shift+ctrl+p -> Git:clone
+    -   Laita urliksi Githubin repon urli (löytyy Githubissa vihreästä code painikkeesta)
+    -   Valitse mihin ladataaan
+    -   Sulje VSCode
 
 3. Kopioi kaikki reat-app tiedostot äsken kloonattuun hakemistoon
 4. Avaa VSCode
-5. Git huomaa uudet tiedostot. Lisään ne paikalliseen gitiin.
-    
-    -   Painamalla plussaa, joka muuttaa niiden tilaksi : a = added
-    -   Tekemällä commitin, jonka jälkeen muutokset on tallessa paikallisessa gitissä
+5. Git huomaa uudet tiedostot ja lisään ne gitiin.
 
-5. Tee push paikallisesta gitistä Githubiin (sama kuin git push -u REMOTE-NAME BRANCH-NAME eli usein 'git push -u origin main')
-6. Varmista, että koodit tuli Githubiin 
+VSCodessa:    
+
+    -   Painamalla plus-merkkiä, muutetaan tilaksi : a = added
+    -   Painamalla committia, muutokset on tallessa paikallisessa gitissä
+    -   Painamalla sync tekee pushin Githubiin (sama kuin git push -u REMOTE-NAME BRANCH-NAME eli usein 'git push -u origin main'
+    -   Tarkista Githubista 
 
 ## Lisää Continuous Integration (CI) Github Actionilla
     
 1. Paina Githubissa actions painiketta
 2. Valitse: Configure -> Continuous Integration -> Node.js
-3. Muuta jos haluat skriptiä
-
-    -   Oletus asentaa sovelluksen ubuntuun, kääntää koodit ja ajaa testit git muutoksissa
-    -   Lintterien ajo kannattaa lisätä jossain vaiheessa
-
-4. Tee commit, jonka jälkeen action kiinnittyy sovellukseen ja CI käytössä
-5. Valitse actions ja kokeile, että CI toimii
+3. Tee Actionille commit suoraan Githubissa ja nyt sekin osa sovellusta. 
+4. Valitse actions ja kokeile, että CI toimii
 
 ## Asenna sovellus Github Pagesiin
 
-1. Lisää paikallisessa hakemistossa nodeen tuki gh-pagesiin
-
-Asenna:
+1. Lisää paikallisesti tuki gh-pagesille
 
     npm install gh-pages --save-dev
 
