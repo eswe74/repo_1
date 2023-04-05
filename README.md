@@ -2,7 +2,7 @@
 
 ## Luo react sovellus testeineen paikalliseen ympäristöön 
 
-### Luo react app 
+### Uusi react app 
 
     npx create-react-app react-app-1
 
@@ -106,19 +106,19 @@
 1. Luo Githubissa repository ja tee siitä private (ei näy muille!)
 2. Kloonaa se sun koneelle paikalliseen hakemistoon. Yksi helppo tapa on 
 
-    1. Avaa VSCode (ei väliä mistä tai mitä sisältää) 
-    2. Paina shift+ctrl+p
-    3. Kirjoita ja valitse Git:clone
-    4. Laita urliksi Githubin repon urli (se löytyy Githubin vihreästä code painikkeesta)
-    5. Valitse mikä tahansa paikka sun koneelta
-    6. Sulje VSCode tässä hakemistossa
+    -   Avaa VSCode (ei väliä mistä tai mitä sisältää) 
+    -   Paina shift+ctrl+p
+    -   Kirjoita ja valitse Git:clone
+    -   Laita urliksi Githubin repon urli (se löytyy Githubin vihreästä code painikkeesta)
+    -   Valitse mikä tahansa paikka sun koneelta
+    -   Sulje VSCode tässä hakemistossa
 
 3. Kopioi kaikki reat-app tiedostot äsken kloonattuun hakemistoon
 4. Avaa VSCode
 5. Git huomaa uudet tiedostot. Lisään ne paikalliseen gitiin.
     
-    1. Painamalla plussaa, joka muuttaa niiden tilaksi : a = added
-    2. Tekemällä commitin, jonka jälkeen muutokset on tallessa paikallisessa gitissä
+    -   Painamalla plussaa, joka muuttaa niiden tilaksi : a = added
+    -   Tekemällä commitin, jonka jälkeen muutokset on tallessa paikallisessa gitissä
 
 5. Tee push paikallisesta gitistä Githubiin (sama kuin git push -u REMOTE-NAME BRANCH-NAME eli usein 'git push -u origin main')
 6. Varmista, että koodit tuli Githubiin 
@@ -128,8 +128,8 @@
 1. Paina Githubissa actions painiketta
 2. Valitse: Configure -> Continuous Integration -> Node.js
 3. Muuta jos haluat skriptiä
-    - oletus asentaa sovelluksen ubuntuun, kääntää koodit ja ajaa testit git muutoksissa
-    - Lintterien ajo kannattaa lisätä jossain vaiheessa
+    -   Oletus asentaa sovelluksen ubuntuun, kääntää koodit ja ajaa testit git muutoksissa
+    -   Lintterien ajo kannattaa lisätä jossain vaiheessa
 4. Tee commit, jonka jälkeen action kiinnittyy sovellukseen ja CI käytössä
 5. Valitse actions ja kokeile, että CI toimii
 
@@ -142,12 +142,13 @@
 2. Lisää package.json tiedostoon (vaikka ekaksi riviksi) 
 
     "homepage": "http://username.github.io/repositoryn",
-
+    
 Esimerkiksi
 
     "homepage": "http://eswe74.github.io/repo_1",
-
+    
 3. Lisää package.json tiedoston script kohtaan kaksi uutta riviä (esim. startin alle)
 
     "predeploy": "npm run build",
-    "deploy : "gh-pages -d build",
+
+    "deploy": "gh-pages -d build",
