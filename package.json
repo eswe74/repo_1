@@ -24,7 +24,7 @@
     "lint:editorconfig": "editorconfig-checker",
     "lint:css": "stylelint src/**/*.css",
     "lint:js": "eslint src/**/*.js",
-    "lint": "npm run lint:editorconfig && npm run lint:css && npm run lint:js"
+    "lint": "npm run lint:ls && npm run lint:editorconfig && npm run lint:css && npm run lint:js"
   },
   "eslintConfig": {
     "extends": [
