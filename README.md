@@ -1,54 +1,101 @@
 # Ohjeita
 
-## Luo react app 
+### Luo react app 
 
-    ### `npx create-react-app react-app-1`
+    npx create-react-app react-app-1
 
-## Kokeile (http://localhost:3000/ oletus) 
+### Kokeile (http://localhost:3000/ oletus) 
 
-    ### `npm start` 
+    npm start 
 
-## Aja testit 
+### Aja testit 
 
-    ### `npm run test` 
+    npm run test 
 
-## Käännä (kääntää koodin jsx->html/js)
+### Käännä koodit (kääntää koodin jsx->html/js ja jos esim. webpack, niin pakkaa myös)
 
-    ### `npm run build` 
+    npm run build 
 
-## Asenna js lintteri
+### Siirrä testi src/test hakemistoon
 
-    ### `npm install eslint --global`
+### Lisää Counter.js koodiin
 
-## Asenna style-lintteri
+    import React, { useState } from "react";
 
-    ### `npm install stylelint stylelint-config-standard -DE`
+    const Counter = () => {
 
-## Asenna editor-lintteri
+        const [counter, setCounter] = useState(0);
 
-    ### `npm install editorconfig-checker -DE`
+        const incrementCounter = () => {
+            setCounter((prevCounter) => prevCounter + 1);
+        };
 
-## Asenna ls lintteri (filename ja directory)
+        const decrementCounter = () => {
+            setCounter((prevCounter) => prevCounter - 1);
+        };
 
-    ### `npm install @ls-lint/ls-lint -DE`
+        return (
+            <>
+                <button data-testid="increment" onClick={incrementCounter}>
+                    +
+                </button>
+                <p data-testid="counter">{counter}</p>
+                <button data-testid="decrement" onClick={decrementCounter}>
+                    -
+                </button>
+            </>
+        );
+    };
 
-## Lisää lintterit package.json tiedostoon
+    export default Counter;
 
-    ### `"lint": "npm run lint:ls && npm run lint:editorconfig && npm run lint:css && npm run lint:js"`
+### Lisää Counter.test.js
 
-## Testaa lintterit
+    import { render, fireEvent, screen } from "@testing-library/react";
+    import Counter from "../Counter";
+
+    test("increments counter", () => {
+    
+        render(<Counter />);
+
+        const counter = screen.getByTestId("counter");
+        const incrementBtn = screen.getByTestId("increment");
+
+        fireEvent.click(incrementBtn);
+
+        expect(counter).toHaveTextContent("1");
+    });
+
+    it("increments counter with two button click", () => {
+    
+        render(<Counter />);
+
+        const counter = screen.getByTestId("counter");
+        const incrementBtn = screen.getByTestId("increment");
+
+        fireEvent.click(incrementBtn);
+        fireEvent.click(incrementBtn); 
+        
+        expect(counter).toHaveTextContent("2");
+    });
+
+### Asenna kaikki lintterit ohjeella:
+
+    https://binary-studio.com/2021/12/21/lint-your-project-with-github-actions/
+
+### Testaa lintterit (jos haluat ohittaa, niin yksi tapa on poistaa käynnistys package.json tiedostosta)
 
     ### `npm run lint`
 
-## Testaa testien kattavuus    
+### Testaa testien kattavuus    
     
     ### `npm test -- --coverage`
 
-## Testaa testien kattavuus    
+### Testaa testien kattavuus    
     
     ### `npm test -- --coverage`
 
-## Lokaaliympäristöon nyt done
+### Lokaaliympäristöon nyt done
 
 ## Vie koodit Githubiin
 
