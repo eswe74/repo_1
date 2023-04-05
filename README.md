@@ -139,13 +139,17 @@
 
 1. Lisää paikallisessa hakemistossa nodeen tuki gh-pagesiin
 
+Asenna:
+
     npm install gh-pages --save-dev
 
 2. Lisää package.json tiedostoon (vaikka ekaksi riviksi) 
 
-Rivit:
+Rivi:
 
     "homepage": "http://username.github.io/repositoryn",
+
+Esimerkikki:
 
     "homepage": "http://eswe74.github.io/repo_1",
     
@@ -159,4 +163,12 @@ Rivit:
 
 4. Tee commit ja push (commit + sync painike)
 
-5. 
+5. Suorita asennus paikallisesta ympäristössä 
+
+Ajamalla:
+
+    npm run deploy
+
+Ilmoituksessa pitäisi lukea mm. Compiled succesfully, File sizes after gzip, project was built ja erityisesti Published.
+
+Nyt Githubiin on ilmestynyt uusi branch: gh-pages (joka näkyy kaikille).
