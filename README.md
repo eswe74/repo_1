@@ -146,8 +146,6 @@
 package.json tiedostoon (vaikka ekaksi riviksi) 
 
     "homepage": "http://username.github.io/repositoryn",
-    
-Esimerkiksi
 
     "homepage": "http://eswe74.github.io/repo_1",
     
