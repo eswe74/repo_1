@@ -128,8 +128,10 @@
 1. Paina Githubissa actions painiketta
 2. Valitse: Configure -> Continuous Integration -> Node.js
 3. Muuta jos haluat skriptiä
+
     -   Oletus asentaa sovelluksen ubuntuun, kääntää koodit ja ajaa testit git muutoksissa
     -   Lintterien ajo kannattaa lisätä jossain vaiheessa
+
 4. Tee commit, jonka jälkeen action kiinnittyy sovellukseen ja CI käytössä
 5. Valitse actions ja kokeile, että CI toimii
 
@@ -139,7 +141,9 @@
 
     npm install gh-pages --save-dev
 
-2. Lisää package.json tiedostoon (vaikka ekaksi riviksi) 
+2. Lisää 
+
+package.json tiedostoon (vaikka ekaksi riviksi) 
 
     "homepage": "http://username.github.io/repositoryn",
     
@@ -147,8 +151,12 @@ Esimerkiksi
 
     "homepage": "http://eswe74.github.io/repo_1",
     
-3. Lisää package.json tiedoston script kohtaan kaksi uutta riviä (esim. startin alle)
+3. Lisää package.json tiedoston script kohtaan (esim. startin alle)
+
+Esiasennus:
 
     "predeploy": "npm run build",
+
+Asennus:
 
     "deploy": "gh-pages -d build",
