@@ -141,9 +141,9 @@
 
     npm install gh-pages --save-dev
 
-2. Lisää 
+2. Lisää package.json tiedostoon (vaikka ekaksi riviksi) 
 
-package.json tiedostoon (vaikka ekaksi riviksi) 
+Rivit:
 
     "homepage": "http://username.github.io/repositoryn",
 
@@ -156,3 +156,7 @@ Rivit:
     "predeploy": "npm run build",
 
     "deploy": "gh-pages -d build",
+
+4. Tee commit ja push (commit + sync painike)
+
+5. 
