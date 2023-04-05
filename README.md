@@ -173,4 +173,14 @@ Ilmoituksessa pitäisi lukea mm. Compiled succesfully, File sizes after gzip, pr
 
 Nyt Githubiin on ilmestynyt uusi branch: gh-pages (joka näkyy kaikille). 
 
-Tarkempia tietoja pages sivustosta löytyy: Settings -> Pages
+Tarkempia tietoja pages sivustosta löytyy: Settings -> Pages. Sieltä voi esimerkiksi käydä katsomassa miltä sovellus näyttää.
+
+
+## Lisää automaattinen asennus eli Continuous Delivery (CD) aikaisemmin tehtyyn skriptiin. 
+
+Tarkat ohjeet CD vaiheesta löytyy täältä:
+
+https://dev.to/dyarleniber/setting-up-a-ci-cd-workflow-on-github-actions-for-a-react-app-with-github-pages-and-codecov-4hnp
+
+
+## Nyt CI/CD on käytössä!
