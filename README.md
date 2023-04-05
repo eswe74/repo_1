@@ -151,10 +151,8 @@ package.json tiedostoon (vaikka ekaksi riviksi)
     
 3. Lisää package.json tiedoston script kohtaan (esim. startin alle)
 
-Esiasennus:
+Rivit:
 
     "predeploy": "npm run build",
-
-Asennus:
 
     "deploy": "gh-pages -d build",
