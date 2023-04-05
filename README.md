@@ -18,9 +18,9 @@
 
     npm run build 
 
-### Siirrä testi src/test hakemistoon
+### Siirrä testit src/test hakemistoon, jotta selkeämpää
 
-### Lisää Counter.js koodiin
+### Lisää Counter.js komponentti
 
     import React, { useState } from "react";
 
@@ -51,7 +51,7 @@
 
     export default Counter;
 
-### Lisää Counter.test.js
+### Lisää Counter.test.js test-hakemistoon
 
     import { render, fireEvent, screen } from "@testing-library/react";
     import Counter from "../Counter";
@@ -103,7 +103,7 @@
 
 ### Luo repository, kloonaa, kopioi sovellus ja vie koodit Githubiin
 
-1. Luo Githubissa repository ja tee siitä private (ei näy muille!)
+1. Luo Githubissa repository ja tee siitä public (huom. näkyy muille)
 2. Kloonaa se sun koneelle paikalliseen hakemistoon. Yksi helppo tapa on 
 
     -   Avaa VSCode (ei väliä mistä tai mitä sisältää) 
@@ -135,7 +135,7 @@
 4. Tee commit, jonka jälkeen action kiinnittyy sovellukseen ja CI käytössä
 5. Valitse actions ja kokeile, että CI toimii
 
-## Asenna sovellus eli tee Continuous Delivery (CD) Github Actionilla Github Pagesiin
+## Asenna sovellus Github Pagesiin
 
 1. Lisää paikallisessa hakemistossa nodeen tuki gh-pagesiin
 
@@ -171,4 +171,6 @@ Ajamalla:
 
 Ilmoituksessa pitäisi lukea mm. Compiled succesfully, File sizes after gzip, project was built ja erityisesti Published.
 
-Nyt Githubiin on ilmestynyt uusi branch: gh-pages (joka näkyy kaikille).
+Nyt Githubiin on ilmestynyt uusi branch: gh-pages (joka näkyy kaikille). 
+
+Tarkempia tietoja pages sivustosta löytyy: Settings -> Pages
