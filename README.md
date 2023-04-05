@@ -165,6 +165,6 @@ Tarkempia tietoja pages sivustosta löytyy: Settings -> Pages. Sieltä voi esime
 
 ## Lisää automaattinen asennus eli Continuous Delivery (CD) aikaisemmin tehtyyn skriptiin. 
 
-Tarkat ohjeet CD vaiheesta löytyy täältä:
+Tarkat ohjeet CD vaiheesta löytyy täältä (kohdasta 'Now we are going to create a new access token, in order to deploy our application through the workflow.'):
 
 https://dev.to/dyarleniber/setting-up-a-ci-cd-workflow-on-github-actions-for-a-react-app-with-github-pages-and-codecov-4hnp
