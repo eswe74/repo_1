@@ -135,48 +135,36 @@ VSCodessa:
 
 ## Asenna sovellus Github Pagesiin
 
-1. Lisää paikallisesti tuki gh-pagesille
+Lisää paikallisesti tuki gh-pagesille
 
     npm install gh-pages --save-dev
 
-2. Lisää package.json tiedostoon (vaikka ekaksi riviksi) 
-
-Rivi:
+Lisää package.json tiedostoon (vaikka ekaksi riviksi) 
 
     "homepage": "http://username.github.io/repositoryn",
 
-Esimerkikki:
+Esimerkiksi:
 
     "homepage": "http://eswe74.github.io/repo_1",
     
-3. Lisää package.json tiedoston script kohtaan (esim. startin alle)
-
-Rivit:
+Lisää package.json tiedoston script kohtaan (esim. startin alle):
 
     "predeploy": "npm run build",
 
     "deploy": "gh-pages -d build",
 
-4. Tee commit ja push (commit + sync painike)
+Tee commit ja push (commit + sync painike)
 
-5. Suorita asennus paikallisesta ympäristössä 
-
-Ajamalla:
+Suorita asennus paikallisesta ympäristössä 
 
     npm run deploy
 
-Ilmoituksessa pitäisi lukea mm. Compiled succesfully, File sizes after gzip, project was built ja erityisesti Published.
-
-Nyt Githubiin on ilmestynyt uusi branch: gh-pages (joka näkyy kaikille). 
+Homma ok, jos kuittaa: 'Published'. Nyt Githubiin on luotu uusi branch gh-pages ja sovellus on asennettu sinne. 
 
 Tarkempia tietoja pages sivustosta löytyy: Settings -> Pages. Sieltä voi esimerkiksi käydä katsomassa miltä sovellus näyttää.
-
 
 ## Lisää automaattinen asennus eli Continuous Delivery (CD) aikaisemmin tehtyyn skriptiin. 
 
 Tarkat ohjeet CD vaiheesta löytyy täältä:
 
 https://dev.to/dyarleniber/setting-up-a-ci-cd-workflow-on-github-actions-for-a-react-app-with-github-pages-and-codecov-4hnp
-
-
-## Nyt CI/CD on käytössä!
